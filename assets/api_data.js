@@ -61,19 +61,19 @@ define({ api: [
     "examples": [
       {
         "title": "Return the last update of device 24:",
-        "content": "   http://api.smartcitizen.me/v0.0.1/6e0428e19cf2bff1a9c05d14d0400bf4/41/posts.json\n"
+        "content": "   https://new-api.smartcitizen.me/v0.0.1/6e0428e19cf2bff1a9c05d14d0400bf4/41/posts.json\n"
       },
       {
         "title": "Return the last day average of device 24:",
-        "content": "   http://api.smartcitizen.me/v0.0.1/6e0428e19cf2bff1a9c05d14d0400bf4/41/posts.json?group_by=day\n"
+        "content": "   https://new-api.smartcitizen.me/v0.0.1/6e0428e19cf2bff1a9c05d14d0400bf4/41/posts.json?group_by=day\n"
       },
       {
         "title": "Return all the data from May 2013 of device 24:",
-        "content": "   http://api.smartcitizen.me/v0.0.1/6e0428e19cf2bff1a9c05d14d0400bf4/41/posts.json?from_date=2013-05-01&to_date=2013-05-31\n"
+        "content": "   https://new-api.smartcitizen.me/v0.0.1/6e0428e19cf2bff1a9c05d14d0400bf4/41/posts.json?from_date=2013-05-01&to_date=2013-05-31\n"
       },
       {
         "title": "Return all the data averaged per day from May 2013 of device 24:",
-        "content": "   http://api.smartcitizen.me/v0.0.1/6e0428e19cf2bff1a9c05d14d0400bf4/41/posts.json?from_date=2013-05-01&to_date=2013-05-31&group_by=day\n"
+        "content": "   https://new-api.smartcitizen.me/v0.0.1/6e0428e19cf2bff1a9c05d14d0400bf4/41/posts.json?from_date=2013-05-01&to_date=2013-05-31&group_by=day\n"
       }
     ],
     "error": {
@@ -130,7 +130,7 @@ define({ api: [
     "examples": [
       {
         "title": " Request:",
-        "content": "   http://api.smartcitizen.me/v0.0.1/6e0428e19cf2bff1a9c05d14d0400bf4/lastpost.json\n"
+        "content": "   https://new-api.smartcitizen.me/v0.0.1/6e0428e19cf2bff1a9c05d14d0400bf4/lastpost.json\n"
       }
     ],
     "error": {
@@ -187,7 +187,7 @@ define({ api: [
     "examples": [
       {
         "title": "Request:",
-        "content": "   http://api.smartcitizen.me/v0.0.1/6e0428e19cf2bff1a9c05d14d0400bf4/me.json\n"
+        "content": "   https://new-api.smartcitizen.me/v0.0.1/6e0428e19cf2bff1a9c05d14d0400bf4/me.json\n"
       }
     ],
     "error": {
@@ -244,7 +244,7 @@ define({ api: [
     "examples": [
       {
         "title": "Request:",
-        "content": "http://api.smartcitizen.me/v0.0.1/6e0428e19cf2bff1a9c05d14d0400bf4/devices.json\n"
+        "content": "https://new-api.smartcitizen.me/v0.0.1/6e0428e19cf2bff1a9c05d14d0400bf4/devices.json\n"
       }
     ],
     "error": {

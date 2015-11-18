@@ -7,25 +7,25 @@
   font-family: 'Droid Sans';
   font-style: normal;
   font-weight: 400;
-  src: local('Droid Sans'), local('DroidSans'), url(http://themes.googleusercontent.com/static/fonts/droidsans/v3/s-BiyweUPV0v-yRb-cjciL3hpw3pgy2gAi-Ip7WPMi0.woff) format('woff');
+  src: local('Droid Sans'), local('DroidSans'), url(https://themes.googleusercontent.com/static/fonts/droidsans/v3/s-BiyweUPV0v-yRb-cjciL3hpw3pgy2gAi-Ip7WPMi0.woff) format('woff');
 }
 @font-face {
   font-family: 'Droid Sans';
   font-style: normal;
   font-weight: 700;
-  src: local('Droid Sans Bold'), local('DroidSans-Bold'), url(http://themes.googleusercontent.com/static/fonts/droidsans/v3/EFpQQyG9GqCrobXxL-KRMXbFhgvWbfSbdVg11QabG8w.woff) format('woff');
+  src: local('Droid Sans Bold'), local('DroidSans-Bold'), url(https://themes.googleusercontent.com/static/fonts/droidsans/v3/EFpQQyG9GqCrobXxL-KRMXbFhgvWbfSbdVg11QabG8w.woff) format('woff');
 }
 @font-face {
   font-family: 'Nobile';
   font-style: normal;
   font-weight: 400;
-  src: local('Nobile'), local('Nobile-Regular'), url(http://themes.googleusercontent.com/static/fonts/nobile/v4/BdG5WJmB9CCPn6im5Y8A5OvvDin1pK8aKteLpeZ5c0A.woff) format('woff');
+  src: local('Nobile'), local('Nobile-Regular'), url(https://themes.googleusercontent.com/static/fonts/nobile/v4/BdG5WJmB9CCPn6im5Y8A5OvvDin1pK8aKteLpeZ5c0A.woff) format('woff');
 }
 @font-face {
   font-family: 'Nobile';
   font-style: normal;
   font-weight: 700;
-  src: local('Nobile Bold'), local('Nobile-Bold'), url(http://themes.googleusercontent.com/static/fonts/nobile/v4/W-bwIcGmtt6wHyJeSNFUX7O3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+  src: local('Nobile Bold'), local('Nobile-Bold'), url(https://themes.googleusercontent.com/static/fonts/nobile/v4/W-bwIcGmtt6wHyJeSNFUX7O3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
 }
 
 
@@ -37,7 +37,7 @@ body {
 	max-width: 1280px;
 }
 
-body, p, a, div, th, td { 
+body, p, a, div, th, td {
 	font-family: "Nobile", sans-serif;
 	font-weight: 400;
 	font-size: 14px;
