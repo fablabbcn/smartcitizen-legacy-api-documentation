@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)http://api.smartcitizen.me/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>apiDoc: Smart Citizen API - 0.0.1</title>
+
+	<meta name="description" content="Smart Citizen Platform Open API. The Smart Citizen API allows you to request back information from your devices and do incredible things with it.">
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="http://js-agent.newrelic.com/nr-768.min.js"></script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UAcBUFdRGwEHXFVWDwk="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:20,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(3),window.onerror=e;try{throw new Error}catch(f){"stack"in f&&(t(4),t(5),"addEventListener"in window&&t(1),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(2),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:5,2:8,3:3,4:7,5:6,6:21,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=t("ee").create(),i=t(1)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t,e){function n(){return s}if(t[1]){var r=t[1];if("function"==typeof r){var s=a(r,"nr@wrapped",function(){return i(r,"fn-",n,r.name||"anonymous")});this.wrapped=t[1]=s,o.emit("initEventContext",[t,e],this.wrapped)}else"function"==typeof r.handleEvent&&i.inPlace(r,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:22,ee:"QJf3ax",gos:"7eSDFh"}],6:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:22,ee:"QJf3ax"}],7:[function(t,e){function n(t,e,n){t[0]=i(t[0],"fn-",null,n)}function r(t,e,n){function r(){return a}this.ctx={};var a={"nr@context":this.ctx};o.emit("initTimerContext",[t,n],a),t[0]=i(t[0],"fn-",r,n)}var o=t("ee").create(),i=t(1)(o);e.exports=o,i.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),i.inPlace(window,["setInterval"],"setInterval-"),i.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),o.on("setInterval-start",n),o.on("setTimer-start",r)},{1:22,ee:"QJf3ax"}],8:[function(t,e){function n(){f.inPlace(this,p,"fn-",o)}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),e.hasOwnProperty("addEventListener")&&u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:5,2:22,ee:"QJf3ax"}],9:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=n(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1),u=window.XMLHttpRequest;t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=n(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var u=0;c>u;u++)e.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof u&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:10,3:8,4:5,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],10:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],11:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:20,2:21,handle:"D5DuLP"}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-768.min.js"},p=e.exports={offset:i(),origin:u,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:20,2:11,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],20:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],21:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],22:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@original",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=t,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:21,ee:"QJf3ax"}]},{},["G9z0Bl",4,9]);</script>
+
+	<link href="assets/css" rel="stylesheet" type="text/css">
+	<link href="assets/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="assets/prettify.css" rel="stylesheet" media="screen">
+	<link href="assets/style.css" rel="stylesheet" media="screen">
+	<link href="http://api.smartcitizen.me/img/favicon.ico" rel="icon" type="image/x-icon">
+	<link rel="image_src" href="http://api.smartcitizen.me/img/logo-facebook2.png">
+<style>#content > #right > .dose > .dosesingle,
+#content > #center > .dose > .dosesingle
+{display:none !important;}</style><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="main" src="assets/main.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="lodash" src="assets/lodash.min.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="locales" src="assets/locale.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="api_project.js" src="assets/api_project.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="api_data.js" src="assets/api_data.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="prettify" src="assets/prettify.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="bootstrap" src="assets/bootstrap.min.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="handlebars" src="assets/handlebars.min.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="locales/de.js" src="assets/de.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="handlebarsExtended" src="assets/handlebars_helper.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="diffMatchPatch" src="assets/diff_match_patch.min.js"></script></head>
+<body>
+
+<script id="template-sidenav" type="text/x-handlebars-template">
+	<!-- -->
+	<ul class="sidenav nav nav-list">
+	<div  style="margin-bottom:20px;"><img src="img/assetLogoDocs.png" alt="Smart Citizen: people looking for better cities"  /></div>
+	{{#each nav}}
+		{{#if isHeader}}
+			{{#if isFixed}}
+				<li class="nav-fixed nav-header active" data-group="{{group}}"><a href="#api-{{group}}">{{underscoreToSpace title}}</a></li>
+			{{else}}
+				<li class="nav-header" data-group="{{group}}"><a href="#api-{{group}}">{{underscoreToSpace title}}</a></li>
+			{{/if}}
+		{{else}}
+			<li {{#if hidden}}class="hide" {{/if}}data-group="{{group}}" data-name="{{name}}" data-version="{{version}}"><a href="#api-{{group}}-{{name}}">{{title}}</a></li>
+		{{/if}}
+	{{/each}}
+	</ul>
+</script>
+
+<script id="template-project" type="text/x-handlebars-template">
+	<div class="pull-left">
+			<h1>{{name}}</h1>
+			{{#if description}}<h2>{{{nl2br description}}}</h2>{{/if}}
+	</div>
+	<div class="pull-right">
+		<div class="btn-group">
+			<button id="version" class="btn btn-large dropdown-toggle" data-toggle="dropdown">
+				<strong>{{version}}</strong> <span class="caret"></span>
+			</button>
+			<ul id="versions" class="dropdown-menu">
+					<li><a id="compareAllWithPredecessor" href="#">{{__ "Compare all with predecessor"}}</a></li>
+					<li class="divider"></li>
+					<li class="disabled"><a href="#">{{__ "show up to version:"}}</a></li>
+	{{#each versions}}
+				<li class="version"><a href="#">{{this}}</a></li>
+	{{/each}}
+			</ul>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</script>
+
+<script id="template-apidoc" type="text/x-handlebars-template">
+	{{#if apidoc}}
+		<div id="api-_" class="apidoc">{{{apidoc}}}</div>
+	{{/if}}
+</script>
+
+<script id="template-generator" type="text/x-handlebars-template">
+	{{#if generator}}
+		{{__ "Generated with"}} <a href="http://apidocjs.com">apiDoc</a> {{{generator.version}}} - {{{generator.time}}}
+	{{/if}}
+</script>
+
+<script id="template-sections" type="text/x-handlebars-template">
+	<section id="api-{{group}}">
+		<h1>{{underscoreToSpace title}}</h1>
+		{{#each articles}}
+			<div id="api-{{group}}-{{name}}">
+				{{{article}}}
+			</div>
+		{{/each}}
+	</section>
+</script>
+
+<script id="template-article" type="text/x-handlebars-template">
+	<article id="api-{{article.group}}-{{article.name}}-{{article.version}}" {{#if hidden}}class="hide"{{/if}} data-group="{{article.group}}" data-name="{{article.name}}" data-version="{{article.version}}">
+		<div class="pull-left">
+			<h1>{{underscoreToSpace article.group}} - {{article.title}}</h1>
+		</div>
+		<div class="pull-right">
+			<div class="btn-group">
+				<button class="version btn dropdown-toggle" data-toggle="dropdown">
+					<strong>{{article.version}}</strong> <span class="caret"></span>
+				</button>
+				<ul class="versions dropdown-menu">
+					<li class="disabled"><a href="#">{{__ "compare changes to:"}}</a></li>
+	{{#each versions}}
+					<li class="version"><a href="#">{{this}}</a></li>
+	{{/each}}
+				</ul>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+
+		{{#if article.description}}
+			<p>{{{nl2br article.description}}}</p>
+		{{/if}}
+
+		<pre class="prettyprint language-html" data-type="{{toLowerCase article.type}}"><code>{{article.url}}</code></pre>
+
+		{{#if article.permission.name}}
+			<p>
+				{{__ "Permission:"}}
+				{{article.permission.name}}
+
+				{{#if article.permission.description}}
+					&nbsp;<a href="#" data-toggle="popover" data-placement="right" data-html="true" data-content="{{nl2br article.permission.description}}" title="" data-original-title="{{article.permission.title}}"><span class="label label-info"><i class="icon icon-info-sign icon-white"></i></span></a>
+				{{/if}}
+			</p>
+		{{else}}
+			{{#if article.permission}}
+				<p>{{__ "Permission:"}} {{article.permission}}</p>
+			{{/if}}
+		{{/if}}
+
+		{{#if article.examples}}
+			<h2>Examples</h2>
+		{{/if}}
+		{{#each article.examples}}
+			{{title}}
+			<pre class="prettyprint language-json" data-type="json"><code>{{{content}}}</code></pre>
+		{{/each}}
+
+
+		{{subTemplate "article-param-block" params=article.parameter _title="Parameter" _hasType=_hasTypeInParameterFields}}
+		{{subTemplate "article-param-block" params=article.success _title="Success (200)" _hasType=_hasTypeInSuccessFields}}
+		{{subTemplate "article-param-block" params=article.info _title="Info" _hasType=_hasTypeInInfoFields}}
+		{{subTemplate "article-param-block" params=article.error _title="Error (4xx)" _col1="Name" _hasType=_hasTypeInErrorFields}}
+	</article>
+</script>
+
+<script id="template-article-param-block" type="text/x-handlebars-template">
+	{{#if params}}
+		<h2>{{__ _title}}</h2>
+		{{#if params.fields}}
+			<table>
+				<thead>
+					<tr>
+						<th style="width: 30%">{{#if _col1}}{{__ _col1}}{{else}}{{__ "Field"}}{{/if}}</th>
+						{{#if _hasType}}<th style="width: 10%">{{__ "Type"}}</th>{{/if}}
+						<th style="width: {{#if _hasType}}60%{{else}}70%{{/if}}">{{__ "Description"}}</th>
+					</tr>
+				</thead>
+				<tbody>
+			{{#each params.fields}}
+					<tr>
+						<td class="code">{{{splitFill field "." "&nbsp;&nbsp;"}}}{{#if optional}} <span class="label label-optional">{{__ "optional"}}</span>{{/if}}</td>
+						{{#if ../../_hasType}}<td>{{{type}}}</td>{{/if}}
+						<td>{{{nl2br description}}}</td>
+					</tr>
+			{{/each}}
+				</tbody>
+			</table>
+		{{else}}
+			<p>{{__ "No response values."}}</p>
+		{{/if}}
+
+		{{#each params.examples}}
+			<strong>{{title}}</strong>
+			<pre class="prettyprint language-json" data-type="json"><code>{{{content}}}</code></pre>
+		{{/each}}
+	{{/if}}
+</script>
+
+<script id="template-compare-article" type="text/x-handlebars-template">
+	<article id="api-{{article.group}}-{{article.name}}-{{article.version}}" {{#if hidden}}class="hide"{{/if}} data-group="{{article.group}}" data-name="{{article.name}}" data-version="{{article.version}}" data-compare-version="{{compare.version}}">
+		<div class="pull-left">
+			<h1>{{underscoreToSpace article.group}} - {{{showDiff article.title compare.title}}}</h1>
+		</div>
+
+		<div class="pull-right">
+			<div class="btn-group">
+				<button class="btn btn-success" disabled>
+					<strong>{{article.version}}</strong> {{__ "compared to"}}
+				</button>
+				<button class="version btn btn-danger dropdown-toggle" data-toggle="dropdown">
+					<strong>{{compare.version}}</strong> <span class="caret"></span>
+				</button>
+				<ul class="versions dropdown-menu">
+					<li class="disabled"><a href="#">{{__ "compare changes to:"}}</a></li>
+					<li class="divider"></li>
+	{{#each versions}}
+					<li class="version"><a href="#">{{this}}</a></li>
+	{{/each}}
+				</ul>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+
+		{{#if article.description}}
+			<p>{{{showDiff article.description compare.description "nl2br"}}}</p>
+		{{else}}
+			{{#if compare.description}}
+			<p>{{{showDiff "" compare.description "nl2br"}}}</p>
+			{{/if}}
+		{{/if}}
+
+		<pre class="prettyprint language-html" data-type="{{toLowerCase article.type}}"><code>{{{showDiff article.url compare.url}}}</code></pre>
+
+		{{subTemplate "article-compare-permission" article=article compare=compare}}
+
+		{{#each_compare_title article.examples compare.examples}}
+
+			{{#if typeSame}}
+			<strong>{{{showDiff source.title compare.title}}}</strong>
+			<pre class="prettyprint language-json" data-type="json"><code>{{{showDiff source.content compare.content}}}</code></pre>
+			{{/if}}
+
+			{{#if typeIns}}
+			<strong><ins>{{{source.title}}}</ins></strong>
+			<pre class="ins prettyprint language-json" data-type="json"><code>{{{source.content}}}</code></pre>
+			{{/if}}
+
+			{{#if typeDel}}
+			<strong><del>{{{compare.title}}}</del></strong>
+			<pre class="del prettyprint language-json" data-type="json"><code>{{{compare.content}}}</code></pre>
+			{{/if}}
+
+		{{/each_compare_title}}
+
+		{{subTemplate "article-compare-param-block" source=article.parameter compare=compare.parameter _title="Parameter" _hasType=_hasTypeInParameterFields}}
+		{{subTemplate "article-compare-param-block" source=article.success compare=compare.success _title="Success (200)" _hasType=_hasTypeInSuccessFields}}
+		{{subTemplate "article-compare-param-block" source=article.info compare=compare.info _title="Info" _hasType=_hasTypeInInfoFields}}
+		{{subTemplate "article-compare-param-block" source=article.error compare=compare.error _title="Error (4xx)" _col1="Name" _hasType=_hasTypeInErrorFields}}
+	</article>
+</script>
+
+<script id="template-article-compare-permission" type="text/x-handlebars-template">
+	{{#if article.permission.name}}
+		<p>
+			{{__ "Permission:"}}
+			{{#if compare.permission.name}}
+
+				{{{showDiff article.permission.name compare.permission.name}}}
+
+				{{#if article.permission.description}}
+					&nbsp;<a href="#" data-toggle="popover" data-placement="right" data-html="true" data-content="{{{showDiff article.permission.description compare.permission.description "nl2br"}}}" title="" data-original-title="{{{showDiff article.permission.title compare.permission.title}}}"><span class="label label-info"><i class="icon icon-info-sign icon-white"></i></span></a>
+				{{/if}}
+
+			{{else}}
+
+				<ins>
+					{{article.permission.name}}
+
+					{{#if article.permission.description}}
+						&nbsp;<a href="#" data-toggle="popover" data-placement="right" data-html="true" data-content="{{nl2br article.permission.description}}" title="" data-original-title="{{article.permission.title}}"><span class="label label-info"><i class="icon icon-info-sign icon-white"></i></span></a>
+					{{/if}}
+				</ins>
+
+				{{#if compare.permission}}
+				<del>
+					<br>{{{compare.permission}}}
+				</del>
+				{{/if}}
+
+			{{/if}}
+		</p>
+	{{else}}
+		{{#if article.permission}}
+			<p>
+				{{__ "Permission:"}}
+				{{#if compare.permission.name}}
+					<ins>
+						{{{article.permission}}}
+					</ins>
+
+					<del>
+					<br>
+					{{compare.permission.name}}
+
+					{{#if compare.permission.description}}
+						&nbsp;<a href="#" data-toggle="popover" data-placement="right" data-html="true" data-content="{{nl2br compare.permission.description}}" title="" data-original-title="{{compare.permission.title}}"><span class="label label-info"><i class="icon icon-info-sign icon-white"></i></span></a>
+					{{/if}}
+					</del>
+				{{else}}
+					{{{showDiff article.permission compare.permission}}}
+				{{/if}}
+			</p>
+		{{else}}
+			{{#if compare.permission.name}}
+				<p>
+					{{__ "Permission:"}}
+
+					<del>
+					<br>
+					{{compare.permission.name}}
+
+					{{#if compare.permission.description}}
+						&nbsp;<a href="#" data-toggle="popover" data-placement="right" data-html="true" data-content="{{nl2br compare.permission.description}}" title="" data-original-title="{{compare.permission.title}}"><span class="label label-info"><i class="icon icon-info-sign icon-white"></i></span></a>
+					{{/if}}
+					</del>
+				</p>
+			{{else}}
+				{{#if compare.permission}}
+					<p>
+						{{__ "Permission:"}}
+						<del>
+						{{{compare.permission}}}
+						</del>
+					</p>
+				{{/if}}
+			{{/if}}
+		{{/if}}
+	{{/if}}
+</script>
+
+<script id="template-article-compare-param-block" type="text/x-handlebars-template">
+	{{#if source}}
+		<h2>{{__ _title}}</h2>
+
+		<table>
+			<thead>
+				<tr>
+					<th style="width: 30%">{{#if _col1}}{{__ _col1}}{{else}}{{__ "Field"}}{{/if}}</th>
+					{{#if _hasType}}<th style="width: 10%">{{__ "Type"}}</th>{{/if}}
+					<th style="width: {{#if _hasType}}60%{{else}}70%{{/if}}">{{__ "Description"}}</th>
+				</tr>
+			</thead>
+
+			<tbody>
+		{{#each_compare_field source.fields compare.fields}}
+
+			{{#if typeSame}}
+				<tr>
+					<td class="code">
+						{{{splitFill source.field "." "&nbsp;&nbsp;"}}}
+						{{#if source.optional}}
+							{{#if compare.optional}} <span class="label label-optional">{{__ "optional"}}</span>
+							{{else}} <span class="label label-optional label-ins">{{__ "optional"}}</span>
+							{{/if}}
+						{{else}}
+							{{#if compare.optional}} <span class="label label-optional label-del">{{__ "optional"}}</span>{{/if}}
+						{{/if}}
+					</td>
+
+				{{#if source.type}}
+					{{#if compare.type}}
+					<td>{{{showDiff source.type compare.type}}}</td>
+					{{else}}
+					<td>{{{source.type}}}</td>
+					{{/if}}
+				{{else}}
+					{{#if compare.type}}
+					<td>{{{compare.type}}}</td>
+					{{else}}
+						{{#if ../../_hasType}}<td></td>{{/if}}
+					{{/if}}
+
+				{{/if}}
+
+					<td>{{{showDiff source.description compare.description "nl2br"}}}</td>
+				</tr>
+			{{/if}}
+
+			{{#if typeIns}}
+				<tr class="ins">
+					<td class="code">
+						{{{splitFill source.field "." "&nbsp;&nbsp;"}}}
+						{{#if source.optional}} <span class="label label-optional label-ins">{{__ "optional"}}</span>{{/if}}
+					</td>
+
+				{{#if source.type}}
+					<td>{{{source.type}}}</td>
+				{{else}}
+					{{{typRowTd}}}
+				{{/if}}
+
+					<td>{{{nl2br source.description}}}</td>
+				</tr>
+			{{/if}}
+
+			{{#if typeDel}}
+				<tr class="del">
+					<td class="code">
+						{{{splitFill compare.field "." "&nbsp;&nbsp;"}}}
+						{{#if compare.optional}} <span class="label label-optional label-del">{{__ "optional"}}</span>{{/if}}
+					</td>
+
+				{{#if compare.type}}
+					<td>{{{compare.type}}}</td>
+				{{else}}
+					{{{typRowTd}}}
+				{{/if}}
+
+					<td>{{{nl2br compare.description}}}</td>
+				</tr>
+			{{/if}}
+
+		{{/each_compare_field}}
+			</tbody>
+		</table>
+
+		{{#each_compare_title source.examples compare.examples}}
+
+
+			{{#if typeSame}}
+			<strong>{{{showDiff source.title compare.title}}}</strong>
+			<pre class="prettyprint language-json" data-type="json"><code>{{{showDiff source.content compare.content}}}</code></pre>
+			{{/if}}
+
+			{{#if typeIns}}
+			<strong><ins>{{{source.title}}}</ins></strong>
+			<pre class="ins prettyprint language-json" data-type="json"><code>{{{source.content}}}</code></pre>
+			{{/if}}
+
+			{{#if typeDel}}
+			<strong><del>{{{compare.title}}}</del></strong>
+			<pre class="del prettyprint language-json" data-type="json"><code>{{{compare.content}}}</code></pre>
+			{{/if}}
+
+		{{/each_compare_title}}
+	{{/if}}
+</script>
+
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span2">
+			<div id="sidenav">
+	<!-- -->
+	<ul class="sidenav nav nav-list">
+	<div style="margin-bottom:20px;"><img src="assets/assetLogoDocs.png" alt="Smart Citizen: people looking for better cities"></div>
+
+
+
+				<li class="nav-fixed nav-header" data-group="_"><a href="http://api.smartcitizen.me/#api-_">Intro</a></li>
+
+
+
+
+
+				<li class="nav-header" data-group="Data"><a href="http://api.smartcitizen.me/#api-Data">Data</a></li>
+
+
+
+
+			<li data-group="Data" data-name="GetLastData" data-version="0.0.1" class="is-new"><a href="http://api.smartcitizen.me/#api-Data-GetLastData">Get Latest Data</a></li>
+
+
+
+			<li data-group="Data" data-name="GetData" data-version="0.0.1" class="is-new"><a href="http://api.smartcitizen.me/#api-Data-GetData">Get Sensors Data</a></li>
+
+
+
+
+				<li class="nav-header" data-group="Devices"><a href="http://api.smartcitizen.me/#api-Devices">Devices</a></li>
+
+
+
+
+			<li data-group="Devices" data-name="GetDevicesInfo" data-version="0.0.1" class="is-new"><a href="http://api.smartcitizen.me/#api-Devices-GetDevicesInfo">Get Devices Info (BETA)</a></li>
+
+
+
+
+				<li class="nav-header" data-group="Users"><a href="http://api.smartcitizen.me/#api-Users">Users</a></li>
+
+
+
+
+			<li data-group="Users" data-name="GetUserInfo" data-version="0.0.1" class="is-new active"><a href="http://api.smartcitizen.me/#api-Users-GetUserInfo">Get User Info</a></li>
+
+
+	</ul>
+</div>
+		</div>
+		<div id="content">
+			<div id="project">
+	<div class="pull-left">
+			<h1>Smart Citizen API</h1>
+			<h2>Smart Citizen Platform Open API</h2>
+	</div>
+	<div class="pull-right">
+		<div class="btn-group">
+			<button id="version" class="btn btn-large dropdown-toggle" data-toggle="dropdown">
+				<strong>0.0.1</strong> <span class="caret"></span>
+			</button>
+			<ul id="versions" class="dropdown-menu">
+					<li><a id="compareAllWithPredecessor" href="http://api.smartcitizen.me/#">Compare all with predecessor</a></li>
+					<li class="divider"></li>
+					<li class="disabled"><a href="http://api.smartcitizen.me/#">show up to version:</a></li>
+
+				<li class="version"><a href="http://api.smartcitizen.me/#">0.0.1</a></li>
+
+			</ul>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</div>
+			<div id="apidoc">
+
+		<div id="api-_" class="apidoc"><h1>Welcome</h1>
+
+<p>The Smart Citizen API allows you to request back information from your devices and do incredible things with it. </p>
+
+<p>It is a <a href="https://en.wikipedia.org/wiki/Representational_state_transfer">REST</a> API and it returns the information in <a href="https://en.wikipedia.org/wiki/Json">JSON</a> format. This means you can easily access the information from any language like Javascript, PHP, Processing.org, Python, and start doing things with it quickly.</p>
+
+<p>To access the API you will always need and <code>api_key</code> you can obtain <a href="http://smartcitizen.me/users/dashboard">here</a>.</p>
+
+<p>The API is currently under BETA more functions will be comming soon. Please, report any problem or suggestion on the <a href="http://forum.smartcitizen.me/">forum</a>.</p></div>
+
+</div>
+			<div id="sections">
+	<section id="api-Data">
+		<h1>Data</h1>
+
+			<div id="api-Data-GetLastData">
+
+	<article id="api-Data-GetLastData-0.0.1" data-group="Data" data-name="GetLastData" data-version="0.0.1">
+		<div class="pull-left">
+			<h1>Data - Get Latest Data</h1>
+		</div>
+		<div class="pull-right">
+			<div class="btn-group">
+				<button class="version btn dropdown-toggle" data-toggle="dropdown">
+					<strong>0.0.1</strong> <span class="caret"></span>
+				</button>
+				<ul class="versions dropdown-menu">
+					<li class="disabled"><a href="http://api.smartcitizen.me/#">compare changes to:</a></li>
+
+					<li class="version"><a href="http://api.smartcitizen.me/#">0.0.1</a></li>
+
+				</ul>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+
+
+			<p>Get back the latest updates from a user devices in order to do whatever you want. Check the examples to learn more and remember you need a valid <code>api_key</code> you can obtain <a href="http://smartcitizen.me/users/dashboard">here</a>.</p>
+
+
+		<pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/v0.0.1/:api_key/lastpost.json</span></code></pre>
+
+
+
+
+
+
+			<h2>Examples</h2>
+
+
+			 Request:
+			<pre class="prettyprint language-json prettyprinted" data-type="json"><code><span class="pln">   http</span><span class="pun">://</span><span class="pln">api</span><span class="pun">.</span><span class="pln">smartcitizen</span><span class="pun">.</span><span class="pln">me</span><span class="pun">/</span><span class="pln">v0</span><span class="pun">.</span><span class="lit">0.1</span><span class="pun">/</span><span class="lit">6e0428e19cf2bff1a9c05d14d0400bf4</span><span class="pun">/</span><span class="pln">lastpost</span><span class="pun">.</span><span class="pln">json</span></code></pre>
+
+
+
+
+
+		<h2>Parameter</h2>
+
+			<table>
+				<thead>
+					<tr>
+						<th style="width: 30%">Field</th>
+						<th style="width: 10%">Type</th>
+						<th style="width: 60%">Description</th>
+					</tr>
+				</thead>
+				<tbody>
+
+					<tr>
+						<td class="code">api_key</td>
+						<td>String</td>
+						<td>User unique API Key. Obtain your key <a href="http://smartcitizen.me/users/dashboard">here</a>.</td>
+					</tr>
+
+				</tbody>
+			</table>
+
+
+
+
+
+
+
+		<h2>Success (200)</h2>
+
+			<table>
+				<thead>
+					<tr>
+						<th style="width: 30%">Field</th>
+						<th style="width: 10%">Type</th>
+						<th style="width: 60%">Description</th>
+					</tr>
+				</thead>
+				<tbody>
+
+					<tr>
+						<td class="code">device</td>
+						<td>Json</td>
+						<td>Device information with the requested data posts.</td>
+					</tr>
+
+				</tbody>
+			</table>
+
+
+
+			<strong>Success-Response:</strong>
+			<pre class="prettyprint language-json prettyprinted" data-type="json"><code><span class="pln">HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">200</span><span class="pln"> OK
+	 </span><span class="pun">{</span><span class="pln">
+	  </span><span class="str">"device"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+	    </span><span class="str">"id"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"24"</span><span class="pun">,</span><span class="pln">
+	    </span><span class="str">"title"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Pral2a"</span><span class="pun">,</span><span class="pln">
+	    </span><span class="str">"description"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Test"</span><span class="pun">,</span><span class="pln">
+	    </span><span class="str">"location"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Barcelona"</span><span class="pun">,</span><span class="pln">
+	    </span><span class="str">"city"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Barcelona"</span><span class="pun">,</span><span class="pln">
+	    </span><span class="str">"country"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Spain"</span><span class="pun">,</span><span class="pln">
+	    </span><span class="str">"exposure"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"outdoor"</span><span class="pun">,</span><span class="pln">
+	    </span><span class="str">"elevation"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"100.0"</span><span class="pun">,</span><span class="pln">
+	    </span><span class="str">"geo_lat"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"41.383180"</span><span class="pun">,</span><span class="pln">
+	    </span><span class="str">"geo_long"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2.157960"</span><span class="pun">,</span><span class="pln">
+	    </span><span class="str">"created"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2013-04-24 18:09:05"</span><span class="pun">,</span><span class="pln">
+	    </span><span class="str">"last_insert_datetime"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2013-05-16 11:44:56"</span><span class="pun">,</span><span class="pln">
+	    </span><span class="str">"posts"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+	      </span><span class="pun">{</span><span class="pln">
+	        </span><span class="str">"timestamp"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2013-05-01 19:46:51"</span><span class="pun">,</span><span class="pln">
+	        </span><span class="str">"temp"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">21.6</span><span class="pun">,</span><span class="pln">
+	        </span><span class="str">"hum"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">51.8</span><span class="pun">,</span><span class="pln">
+	        </span><span class="str">"co"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">131054</span><span class="pun">,</span><span class="pln">
+	        </span><span class="str">"no2"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">75121</span><span class="pun">,</span><span class="pln">
+	        </span><span class="str">"light"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">24.2</span><span class="pun">,</span><span class="pln">
+	        </span><span class="str">"noise"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">50</span><span class="pun">,</span><span class="pln">
+	        </span><span class="str">"bat"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">92.9</span><span class="pun">,</span><span class="pln">
+	        </span><span class="str">"panel"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">4.41</span><span class="pun">,</span><span class="pln">
+	        </span><span class="str">"nets"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">6</span><span class="pun">,</span><span class="pln">
+	        </span><span class="str">"insert_datetime"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2013-05-01 21:47:00"</span><span class="pln">
+	      </span><span class="pun">}</span><span class="pln">
+	    </span><span class="pun">]</span><span class="pln">
+	  </span><span class="pun">}</span><span class="pln">
+	</span><span class="pun">}</span></code></pre>
+
+
+
+
+
+
+
+
+		<h2>Error (4xx)</h2>
+
+			<table>
+				<thead>
+					<tr>
+						<th style="width: 30%">Name</th>
+
+						<th style="width: 70%">Description</th>
+					</tr>
+				</thead>
+				<tbody>
+
+					<tr>
+						<td class="code">invalidAPIKEY</td>
+
+						<td>Check on your platform profile you are using a valid <code>API KEY</code>.</td>
+					</tr>
+
+				</tbody>
+			</table>
+
+
+
+			<strong>Error-Response:</strong>
+			<pre class="prettyprint language-json prettyprinted" data-type="json"><code><span class="pln">   HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">404</span><span class="pln"> </span><span class="typ">Not</span><span class="pln"> </span><span class="typ">Found</span><span class="pln">
+   </span><span class="pun">{</span><span class="pln">
+     </span><span class="str">"error"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Feed do not exist. Data not available"</span><span class="pln">
+   </span><span class="pun">}</span></code></pre>
+
+
+
+	</article>
+
+			</div>
+
+			<div id="api-Data-GetData">
+
+	<article id="api-Data-GetData-0.0.1" data-group="Data" data-name="GetData" data-version="0.0.1">
+		<div class="pull-left">
+			<h1>Data - Get Sensors Data</h1>
+		</div>
+		<div class="pull-right">
+			<div class="btn-group">
+				<button class="version btn dropdown-toggle" data-toggle="dropdown">
+					<strong>0.0.1</strong> <span class="caret"></span>
+				</button>
+				<ul class="versions dropdown-menu">
+					<li class="disabled"><a href="http://api.smartcitizen.me/#">compare changes to:</a></li>
+
+					<li class="version"><a href="http://api.smartcitizen.me/#">0.0.1</a></li>
+
+				</ul>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+
+
+			<p>Get data back from one device in order to do whatever you want. You can request data by a time range and even retrieve averages agregated by days or hours. Check the examples to learn more and remember you need a valid <code>api_key</code> you can obtain <a href="http://smartcitizen.me/users/dashboard">here</a>.</p>
+
+
+		<pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/v0.0.1/:api_key/:device_id/post.json?from_date=:from&amp;to_date=:to&amp;group_by=:range</span></code></pre>
+
+
+
+
+
+
+			<h2>Examples</h2>
+
+
+			Return the last update of device 24:
+			<pre class="prettyprint language-json prettyprinted" data-type="json"><code><span class="pln">   http</span><span class="pun">://</span><span class="pln">api</span><span class="pun">.</span><span class="pln">smartcitizen</span><span class="pun">.</span><span class="pln">me</span><span class="pun">/</span><span class="pln">v0</span><span class="pun">.</span><span class="lit">0.1</span><span class="pun">/</span><span class="lit">6e0428e19cf2bff1a9c05d14d0400bf4</span><span class="pun">/</span><span class="lit">41</span><span class="pun">/</span><span class="pln">posts</span><span class="pun">.</span><span class="pln">json</span></code></pre>
+
+			Return the last day average of device 24:
+			<pre class="prettyprint language-json prettyprinted" data-type="json"><code><span class="pln">   http</span><span class="pun">://</span><span class="pln">api</span><span class="pun">.</span><span class="pln">smartcitizen</span><span class="pun">.</span><span class="pln">me</span><span class="pun">/</span><span class="pln">v0</span><span class="pun">.</span><span class="lit">0.1</span><span class="pun">/</span><span class="lit">6e0428e19cf2bff1a9c05d14d0400bf4</span><span class="pun">/</span><span class="lit">41</span><span class="pun">/</span><span class="pln">posts</span><span class="pun">.</span><span class="pln">json</span><span class="pun">?</span><span class="pln">group_by</span><span class="pun">=</span><span class="pln">day</span></code></pre>
+
+			Return all the data from May 2013 of device 24:
+			<pre class="prettyprint language-json prettyprinted" data-type="json"><code><span class="pln">   http</span><span class="pun">://</span><span class="pln">api</span><span class="pun">.</span><span class="pln">smartcitizen</span><span class="pun">.</span><span class="pln">me</span><span class="pun">/</span><span class="pln">v0</span><span class="pun">.</span><span class="lit">0.1</span><span class="pun">/</span><span class="lit">6e0428e19cf2bff1a9c05d14d0400bf4</span><span class="pun">/</span><span class="lit">41</span><span class="pun">/</span><span class="pln">posts</span><span class="pun">.</span><span class="pln">json</span><span class="pun">?</span><span class="pln">from_date</span><span class="pun">=</span><span class="lit">2013</span><span class="pun">-</span><span class="lit">05</span><span class="pun">-</span><span class="lit">01</span><span class="pun">&amp;</span><span class="pln">to_date</span><span class="pun">=</span><span class="lit">2013</span><span class="pun">-</span><span class="lit">05</span><span class="pun">-</span><span class="lit">31</span></code></pre>
+
+			Return all the data averaged per day from May 2013 of device 24:
+			<pre class="prettyprint language-json prettyprinted" data-type="json"><code><span class="pln">   http</span><span class="pun">://</span><span class="pln">api</span><span class="pun">.</span><span class="pln">smartcitizen</span><span class="pun">.</span><span class="pln">me</span><span class="pun">/</span><span class="pln">v0</span><span class="pun">.</span><span class="lit">0.1</span><span class="pun">/</span><span class="lit">6e0428e19cf2bff1a9c05d14d0400bf4</span><span class="pun">/</span><span class="lit">41</span><span class="pun">/</span><span class="pln">posts</span><span class="pun">.</span><span class="pln">json</span><span class="pun">?</span><span class="pln">from_date</span><span class="pun">=</span><span class="lit">2013</span><span class="pun">-</span><span class="lit">05</span><span class="pun">-</span><span class="lit">01</span><span class="pun">&amp;</span><span class="pln">to_date</span><span class="pun">=</span><span class="lit">2013</span><span class="pun">-</span><span class="lit">05</span><span class="pun">-</span><span class="lit">31</span><span class="pun">&amp;</span><span class="pln">group_by</span><span class="pun">=</span><span class="pln">day</span></code></pre>
+
+
+
+
+
+		<h2>Parameter</h2>
+
+			<table>
+				<thead>
+					<tr>
+						<th style="width: 30%">Field</th>
+						<th style="width: 10%">Type</th>
+						<th style="width: 60%">Description</th>
+					</tr>
+				</thead>
+				<tbody>
+
+					<tr>
+						<td class="code">api_key</td>
+						<td>String</td>
+						<td>User unique API Key. Obtain your key <a href="http://smartcitizen.me/users/dashboard">here</a>.</td>
+					</tr>
+
+					<tr>
+						<td class="code">device_id</td>
+						<td>Number</td>
+						<td>Device unique ID.</td>
+					</tr>
+
+					<tr>
+						<td class="code">from <span class="label label-optional">optional</span></td>
+						<td>Date</td>
+						<td>Starting date <code>YYYY-MM-DD</code>. If not set gets a limit of 500 posts since the <code>to</code> date.</td>
+					</tr>
+
+					<tr>
+						<td class="code">to <span class="label label-optional">optional</span></td>
+						<td>Date</td>
+						<td>Finish date <code>YYYY-MM-DD</code>. If not set gets the current date.</td>
+					</tr>
+
+					<tr>
+						<td class="code">range <span class="label label-optional">optional</span></td>
+						<td>String["hour","day"]</td>
+						<td>Get data averaged by a range.</td>
+					</tr>
+
+				</tbody>
+			</table>
+
+
+
+
+
+
+
+		<h2>Success (200)</h2>
+
+			<table>
+				<thead>
+					<tr>
+						<th style="width: 30%">Field</th>
+						<th style="width: 10%">Type</th>
+						<th style="width: 60%">Description</th>
+					</tr>
+				</thead>
+				<tbody>
+
+					<tr>
+						<td class="code">device</td>
+						<td>Json</td>
+						<td>Device information with the requested data posts.</td>
+					</tr>
+
+				</tbody>
+			</table>
+
+
+
+			<strong>Success-Response:</strong>
+			<pre class="prettyprint language-json prettyprinted" data-type="json"><code><span class="pln">HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">200</span><span class="pln"> OK
+	 </span><span class="pun">{</span><span class="pln">
+	  </span><span class="str">"device"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+	    </span><span class="str">"id"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"24"</span><span class="pun">,</span><span class="pln">
+	    </span><span class="str">"title"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Pral2a"</span><span class="pun">,</span><span class="pln">
+	    </span><span class="str">"description"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Test"</span><span class="pun">,</span><span class="pln">
+	    </span><span class="str">"location"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Barcelona"</span><span class="pun">,</span><span class="pln">
+	    </span><span class="str">"city"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Barcelona"</span><span class="pun">,</span><span class="pln">
+	    </span><span class="str">"country"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Spain"</span><span class="pun">,</span><span class="pln">
+	    </span><span class="str">"exposure"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"outdoor"</span><span class="pun">,</span><span class="pln">
+	    </span><span class="str">"elevation"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"100.0"</span><span class="pun">,</span><span class="pln">
+	    </span><span class="str">"geo_lat"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"41.383180"</span><span class="pun">,</span><span class="pln">
+	    </span><span class="str">"geo_long"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2.157960"</span><span class="pun">,</span><span class="pln">
+	    </span><span class="str">"created"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2013-04-24 18:09:05"</span><span class="pun">,</span><span class="pln">
+	    </span><span class="str">"last_insert_datetime"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2013-05-16 11:44:56"</span><span class="pun">,</span><span class="pln">
+	    </span><span class="str">"posts"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+	      </span><span class="pun">{</span><span class="pln">
+	        </span><span class="str">"timestamp"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2013-05-01 19:46:51"</span><span class="pun">,</span><span class="pln">
+	        </span><span class="str">"temp"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">21.6</span><span class="pun">,</span><span class="pln">
+	        </span><span class="str">"hum"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">51.8</span><span class="pun">,</span><span class="pln">
+	        </span><span class="str">"co"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">131054</span><span class="pun">,</span><span class="pln">
+	        </span><span class="str">"no2"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">75121</span><span class="pun">,</span><span class="pln">
+	        </span><span class="str">"light"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">24.2</span><span class="pun">,</span><span class="pln">
+	        </span><span class="str">"noise"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">50</span><span class="pun">,</span><span class="pln">
+	        </span><span class="str">"bat"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">92.9</span><span class="pun">,</span><span class="pln">
+	        </span><span class="str">"panel"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">4.41</span><span class="pun">,</span><span class="pln">
+	        </span><span class="str">"nets"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">6</span><span class="pun">,</span><span class="pln">
+	        </span><span class="str">"insert_datetime"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2013-05-01 21:47:00"</span><span class="pln">
+	      </span><span class="pun">}</span><span class="pln">
+	    </span><span class="pun">]</span><span class="pln">
+	  </span><span class="pun">}</span><span class="pln">
+	</span><span class="pun">}</span></code></pre>
+
+
+
+
+
+
+
+
+		<h2>Error (4xx)</h2>
+
+			<table>
+				<thead>
+					<tr>
+						<th style="width: 30%">Name</th>
+
+						<th style="width: 70%">Description</th>
+					</tr>
+				</thead>
+				<tbody>
+
+					<tr>
+						<td class="code">invalidAPIKEY</td>
+
+						<td>Check on your platform profile you are using a valid <code>API KEY</code>.</td>
+					</tr>
+
+				</tbody>
+			</table>
+
+
+
+			<strong>Error-Response:</strong>
+			<pre class="prettyprint language-json prettyprinted" data-type="json"><code><span class="pln">   HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">404</span><span class="pln"> </span><span class="typ">Not</span><span class="pln"> </span><span class="typ">Found</span><span class="pln">
+   </span><span class="pun">{</span><span class="pln">
+     </span><span class="str">"error"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Feed do not exist. Data not available"</span><span class="pln">
+   </span><span class="pun">}</span></code></pre>
+
+
+
+	</article>
+
+			</div>
+
+	</section>
+
+	<section id="api-Devices">
+		<h1>Devices</h1>
+
+			<div id="api-Devices-GetDevicesInfo">
+
+	<article id="api-Devices-GetDevicesInfo-0.0.1" data-group="Devices" data-name="GetDevicesInfo" data-version="0.0.1">
+		<div class="pull-left">
+			<h1>Devices - Get Devices Info (BETA)</h1>
+		</div>
+		<div class="pull-right">
+			<div class="btn-group">
+				<button class="version btn dropdown-toggle" data-toggle="dropdown">
+					<strong>0.0.1</strong> <span class="caret"></span>
+				</button>
+				<ul class="versions dropdown-menu">
+					<li class="disabled"><a href="http://api.smartcitizen.me/#">compare changes to:</a></li>
+
+					<li class="version"><a href="http://api.smartcitizen.me/#">0.0.1</a></li>
+
+				</ul>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+
+
+			<p>Get back all the devices on the platform in order to do whatever you want. This query is currently limited to selected <code>api_key</code> users, contact <a href="mailto:support@smartcitizen.me">support</a> in order to get a BETA key. Check the examples to learn more.</p>
+
+
+		<pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/api/:api_key/devices.json</span></code></pre>
+
+
+
+
+
+
+			<h2>Examples</h2>
+
+
+			Request:
+			<pre class="prettyprint language-json prettyprinted" data-type="json"><code><span class="pln">http</span><span class="pun">://</span><span class="pln">api</span><span class="pun">.</span><span class="pln">smartcitizen</span><span class="pun">.</span><span class="pln">me</span><span class="pun">/</span><span class="pln">v0</span><span class="pun">.</span><span class="lit">0.1</span><span class="pun">/</span><span class="lit">6e0428e19cf2bff1a9c05d14d0400bf4</span><span class="pun">/</span><span class="pln">devices</span><span class="pun">.</span><span class="pln">json</span></code></pre>
+
+
+
+
+
+		<h2>Parameter</h2>
+
+			<table>
+				<thead>
+					<tr>
+						<th style="width: 30%">Field</th>
+						<th style="width: 10%">Type</th>
+						<th style="width: 60%">Description</th>
+					</tr>
+				</thead>
+				<tbody>
+
+					<tr>
+						<td class="code">api_key</td>
+						<td>String</td>
+						<td>User unique API Key. Obtain your key <a href="http://smartcitizen.me/users/dashboard">here</a>.</td>
+					</tr>
+
+				</tbody>
+			</table>
+
+
+
+
+
+
+
+		<h2>Success (200)</h2>
+
+			<table>
+				<thead>
+					<tr>
+						<th style="width: 30%">Field</th>
+						<th style="width: 10%">Type</th>
+						<th style="width: 60%">Description</th>
+					</tr>
+				</thead>
+				<tbody>
+
+					<tr>
+						<td class="code">devices</td>
+						<td>Json</td>
+						<td>User information.</td>
+					</tr>
+
+				</tbody>
+			</table>
+
+
+
+			<strong>Success-Response:</strong>
+			<pre class="prettyprint language-json prettyprinted" data-type="json"><code><span class="pln">HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">200</span><span class="pln"> OK
+</span><span class="pun">{</span><span class="pln">
+  </span><span class="str">"devices"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+      </span><span class="pun">{</span><span class="pln">
+        </span><span class="str">"id"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"24"</span><span class="pun">,</span><span class="pln">
+        </span><span class="str">"title"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Pral2a"</span><span class="pun">,</span><span class="pln">
+        </span><span class="str">"description"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Test"</span><span class="pun">,</span><span class="pln">
+        </span><span class="str">"location"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Barcelona"</span><span class="pun">,</span><span class="pln">
+        </span><span class="str">"city"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Barcelona"</span><span class="pun">,</span><span class="pln">
+        </span><span class="str">"country"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Spain"</span><span class="pun">,</span><span class="pln">
+        </span><span class="str">"exposure"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"outdoor"</span><span class="pun">,</span><span class="pln">
+        </span><span class="str">"elevation"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"100.0"</span><span class="pun">,</span><span class="pln">
+        </span><span class="str">"geo_lat"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"41.383180"</span><span class="pun">,</span><span class="pln">
+        </span><span class="str">"geo_long"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2.157960"</span><span class="pun">,</span><span class="pln">
+        </span><span class="str">"created"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2013-04-24 18:09:05"</span><span class="pun">,</span><span class="pln">
+        </span><span class="str">"last_insert_datetime"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2013-05-16 11:44:56"</span><span class="pln">
+      </span><span class="pun">}</span><span class="pln">
+    </span><span class="pun">]</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+
+
+
+
+
+
+
+		<h2>Error (4xx)</h2>
+
+			<table>
+				<thead>
+					<tr>
+						<th style="width: 30%">Name</th>
+
+						<th style="width: 70%">Description</th>
+					</tr>
+				</thead>
+				<tbody>
+
+					<tr>
+						<td class="code">invalidAPIKEY</td>
+
+						<td>Check on your platform profile you are using a valid <code>API KEY</code>.</td>
+					</tr>
+
+					<tr>
+						<td class="code">unauthorizedAPIKEY</td>
+
+						<td>Contact <a href="mailto:support@smartcitizen.me">support</a> in order to check you have a valid <code>API KEY</code>.</td>
+					</tr>
+
+				</tbody>
+			</table>
+
+
+
+			<strong>Error-Response:</strong>
+			<pre class="prettyprint language-json prettyprinted" data-type="json"><code><span class="pln">   HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">404</span><span class="pln"> </span><span class="typ">Not</span><span class="pln"> </span><span class="typ">Found</span><span class="pln">
+   </span><span class="pun">{</span><span class="pln">
+     </span><span class="str">"error"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Feed do not exist. Data not available"</span><span class="pln">
+   </span><span class="pun">}</span></code></pre>
+
+
+
+	</article>
+
+			</div>
+
+	</section>
+
+	<section id="api-Users">
+		<h1>Users</h1>
+
+			<div id="api-Users-GetUserInfo">
+
+	<article id="api-Users-GetUserInfo-0.0.1" data-group="Users" data-name="GetUserInfo" data-version="0.0.1">
+		<div class="pull-left">
+			<h1>Users - Get User Info</h1>
+		</div>
+		<div class="pull-right">
+			<div class="btn-group">
+				<button class="version btn dropdown-toggle" data-toggle="dropdown">
+					<strong>0.0.1</strong> <span class="caret"></span>
+				</button>
+				<ul class="versions dropdown-menu">
+					<li class="disabled"><a href="http://api.smartcitizen.me/#">compare changes to:</a></li>
+
+					<li class="version"><a href="http://api.smartcitizen.me/#">0.0.1</a></li>
+
+				</ul>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+
+
+			<p>Get back all the information about a user in order to do whatever you want. Check the examples to learn more and remember you need a valid <code>api_key</code> you can obtain <a href="http://smartcitizen.me/users/dashboard">here</a>.</p>
+
+
+		<pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/v0.0.1/:api_key/me.json</span></code></pre>
+
+
+
+
+
+
+			<h2>Examples</h2>
+
+
+			Request:
+			<pre class="prettyprint language-json prettyprinted" data-type="json"><code><span class="pln">   http</span><span class="pun">://</span><span class="pln">api</span><span class="pun">.</span><span class="pln">smartcitizen</span><span class="pun">.</span><span class="pln">me</span><span class="pun">/</span><span class="pln">v0</span><span class="pun">.</span><span class="lit">0.1</span><span class="pun">/</span><span class="lit">6e0428e19cf2bff1a9c05d14d0400bf4</span><span class="pun">/</span><span class="pln">me</span><span class="pun">.</span><span class="pln">json</span></code></pre>
+
+
+
+
+
+		<h2>Parameter</h2>
+
+			<table>
+				<thead>
+					<tr>
+						<th style="width: 30%">Field</th>
+						<th style="width: 10%">Type</th>
+						<th style="width: 60%">Description</th>
+					</tr>
+				</thead>
+				<tbody>
+
+					<tr>
+						<td class="code">api_key</td>
+						<td>String</td>
+						<td>User unique API Key. Obtain your key <a href="http://smartcitizen.me/users/dashboard">here</a>.</td>
+					</tr>
+
+				</tbody>
+			</table>
+
+
+
+
+
+
+
+		<h2>Success (200)</h2>
+
+			<table>
+				<thead>
+					<tr>
+						<th style="width: 30%">Field</th>
+						<th style="width: 10%">Type</th>
+						<th style="width: 60%">Description</th>
+					</tr>
+				</thead>
+				<tbody>
+
+					<tr>
+						<td class="code">me</td>
+						<td>Json</td>
+						<td>User information.</td>
+					</tr>
+
+				</tbody>
+			</table>
+
+
+
+			<strong>Success-Response:</strong>
+			<pre class="prettyprint language-json prettyprinted" data-type="json"><code><span class="pln">HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">200</span><span class="pln"> OK
+</span><span class="pun">{</span><span class="pln">
+  </span><span class="str">"me"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="str">"id"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"5"</span><span class="pun">,</span><span class="pln">
+    </span><span class="str">"username"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Guillem"</span><span class="pun">,</span><span class="pln">
+    </span><span class="str">"city"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Barcelona"</span><span class="pun">,</span><span class="pln">
+    </span><span class="str">"country"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Spain"</span><span class="pun">,</span><span class="pln">
+    </span><span class="str">"website"</span><span class="pun">:</span><span class="pln"> </span><span class="str">""</span><span class="pun">,</span><span class="pln">
+    </span><span class="str">"email"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"g8i113m@gmail.com"</span><span class="pun">,</span><span class="pln">
+    </span><span class="str">"created"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2013-04-23 00:34:13"</span><span class="pun">,</span><span class="pln">
+    </span><span class="str">"devices"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+      </span><span class="pun">{</span><span class="pln">
+        </span><span class="str">"id"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"24"</span><span class="pun">,</span><span class="pln">
+        </span><span class="str">"title"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Pral2a"</span><span class="pun">,</span><span class="pln">
+        </span><span class="str">"description"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Test"</span><span class="pun">,</span><span class="pln">
+        </span><span class="str">"location"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Barcelona"</span><span class="pun">,</span><span class="pln">
+        </span><span class="str">"city"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Barcelona"</span><span class="pun">,</span><span class="pln">
+        </span><span class="str">"country"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Spain"</span><span class="pun">,</span><span class="pln">
+        </span><span class="str">"exposure"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"outdoor"</span><span class="pun">,</span><span class="pln">
+        </span><span class="str">"elevation"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"100.0"</span><span class="pun">,</span><span class="pln">
+        </span><span class="str">"geo_lat"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"41.383180"</span><span class="pun">,</span><span class="pln">
+        </span><span class="str">"geo_long"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2.157960"</span><span class="pun">,</span><span class="pln">
+        </span><span class="str">"created"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2013-04-24 18:09:05"</span><span class="pun">,</span><span class="pln">
+        </span><span class="str">"last_insert_datetime"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2013-05-16 11:44:56"</span><span class="pln">
+      </span><span class="pun">}</span><span class="pln">
+    </span><span class="pun">]</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+
+
+
+
+
+
+
+		<h2>Error (4xx)</h2>
+
+			<table>
+				<thead>
+					<tr>
+						<th style="width: 30%">Name</th>
+
+						<th style="width: 70%">Description</th>
+					</tr>
+				</thead>
+				<tbody>
+
+					<tr>
+						<td class="code">invalidAPIKEY</td>
+
+						<td>Check on your platform profile you are using a valid <code>API KEY</code>.</td>
+					</tr>
+
+				</tbody>
+			</table>
+
+
+
+			<strong>Error-Response:</strong>
+			<pre class="prettyprint language-json prettyprinted" data-type="json"><code><span class="pln">   HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">404</span><span class="pln"> </span><span class="typ">Not</span><span class="pln"> </span><span class="typ">Found</span><span class="pln">
+   </span><span class="pun">{</span><span class="pln">
+     </span><span class="str">"error"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Feed do not exist. Data not available"</span><span class="pln">
+   </span><span class="pun">}</span></code></pre>
+
+
+
+	</article>
+
+			</div>
+
+	</section>
+</div>
+			<div id="generator">
+
+		Generated with <a href="http://apidocjs.com/">apiDoc</a> 0.1.11 - 2013-09-25T17:03:37.904Z
+
+</div>
+		</div>
+	</div>
+</div>
+
+<script data-main="main.js" src="assets/require-jquery.min.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"70f0ed2574","applicationID":"2784488","transactionName":"Y1daY0tVCEYEUEdYC1odbUVQGw9bAVZLHxRcQg==","queueTime":0,"applicationTime":0,"ttGuid":"","agentToken":"","atts":"TxBZFQNPG0g=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-768.min.js"}</script>
+<div id="window-resizer-tooltip"><a href="http://api.smartcitizen.me/#" title="Edit settings"></a><span class="tooltipTitle">Window size: </span><span class="tooltipWidth" id="winWidth"></span> x <span class="tooltipHeight" id="winHeight"></span><br><span class="tooltipTitle">Viewport size: </span><span class="tooltipWidth" id="vpWidth"></span> x <span class="tooltipHeight" id="vpHeight"></span></div></body></html>
